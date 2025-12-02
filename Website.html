@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaswan Narayanan - Engineering Portfolio</title>
+  <style>
+    /* === ELECTRONICS / TECH THEME BACKGROUND === */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #0e0e16;
+      color: #eaeaea;
+      overflow-x: hidden;
+    }
+
+    /* Animated circuit-board lines */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('Background.png'); /* Replace with your image */
+      opacity: 0.15;
+      animation: circuitMove 40s linear infinite;
+      z-index: -2;
+    }
+
+    @keyframes circuitMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-600px); }
+    }
+
+    /* glowing grid overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0,255,255,0.12), transparent 60%);
+      z-index: -1;
+    }
+
+    /* === HEADER WITH PROFILE PIC === */
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 20px rgba(0,255,255,0.6), 0 0 40px rgba(0,255,255,0.4);
+  object-fit: cover;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px #00d9ff; }
+      50% { box-shadow: 0 0 25px #00eaff; }
+      100% { box-shadow: 0 0 10px #00d9ff; }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #00eaff;
+      text-shadow: 0 0 15px #00eaff;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,255,255,0.2);
+      transform: translateY(-3px);
+    }
+
+    /* === MAIN CONTENT === */
+p { line-height: 1.7; margin-bottom: 1.2rem; }
+    main {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.08);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      transition: 0.35s;
+    }
+
+    section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 28px rgba(0,255,255,0.2);
+    }
+
+    h2 {
+      color: #00eaff;
+      border-left: 5px solid #00eaff;
+      padding-left: 0.8rem;
+      text-shadow: 0 0 12px #00eaff;
+    }
+
+    /* === ACHIEVEMENTS WITH INDIVIDUAL SECTORS === */
+    .achievement-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .achievement-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      background: rgba(255,255,255,0.06);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 0 14px rgba(0,255,255,0.15);
+      animation: slideFade 1.3s ease;
+      transition: 0.3s;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateX(-40px);} 
+      to { opacity: 1; transform: translateX(0);} 
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 28px rgba(0,255,255,0.25);
+    }
+
+    .achievement-img {
+      width: 260px;
+      height: 180px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+      transition: 0.35s;
+    }
+
+    .achievement-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* === CONTACT === */
+    .contact-links a {
+      color: #00eaff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Profile .jpg" class="profile-pic" alt="Profile Picture"> <!-- Replace with your pic -->
+    <h1>Yaswan Narayanan</h1>
+    <p>Engineering Student | Electronics & VLSI | IoT Developer</p>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Internships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am an Electronics and VLSI Engineering student passionate about IoT, embedded systems, and creating innovative tech solutions. Below is my engineering journey told as a readable, spacious vlog-style story.</p>
+    </section>
+
+    <section id="vlog">
+      <h2>My Engineering Journey Vlog Story</h2>
+      <p><strong>Loyola ICAM Technical Event My Beginning</strong><br>
+      The journey truly began at Loyola ICAM College of Engineering. As a second-year student, I stepped out of my comfort zone for the first time — into a buzzing tech environment filled with ideas, circuits, and innovation. After hours of brainstorming, debugging, and presenting, my team secured <strong>3rd prize</strong>. That win lit the spark in me.</p>
+
+      <p><strong>CMR National Level Hackathon Hyderabad</strong><br>
+      Next, I traveled to Hyderabad for a national level 36 hour hackathon. Intense, competitive, and unforgettable. Our project an <strong>IoT-based Dust Monitoring System for Solar Panels</strong>  kept us awake through the night. Real-time sensors, cloud integration, and environmental tech fused into a single solution. It was one of the best learning experiences of my engineering life.</p>
+
+      <p><strong>IEEE Envision 2025 SSN College of Engineering</strong><br>
+      This event was different. No preset teams everyone was grouped on the spot. I collaborated with completely new people, quickly understanding strengths and forming a strong team. We built a <strong>Peer-to-Peer Education Platform</strong> from scratch within the tight event timeline. More than technical skills, this event taught me adaptability, communication, and teamwork.</p>
+
+      <p>This journey shaped my passion for engineering, strengthened my confidence, and pushed me to become a better innovator every day.</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+
+      <div class="achievement-container">
+
+        <div class="achievement-card">
+          <img src="Loyala ICAM .jpg" class="achievement-img" alt="Loyola Event Photo">
+          <div>
+            <h3>3rd Prize - Loyola ICAM Technical Event</h3>
+            <p>Awarded 3rd place for participating in a highly competitive technical challenge in my second year.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <img src="CMR .jpg" class="achievement-img" alt="Hackathon Photo">
+          <div>
+            <h3>National Level Hackathon - Hyderabad</h3>
+            <p>Developed an IoT-based dust monitoring system for solar panels. Selected to present at a national platform.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <img src="SSN.jpg" class="achievement-img" alt="IEEE Buildathon">
+          <div>
+            <h3>IEEE Envision Buildthon</h3>
+            <p>Collaborated in building a Peer-to-Peer Education Platform aimed at improving learning accessibility.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>IoT Dust Monitoring System</strong> - Hackathon Project</li>
+        <li><strong>P2P Education Platform</strong> - IEEE Buildathon</li>
+        <li><strong>Mazer Game Solver</strong> (Verilog)</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>NPTEL - Electronics System Design: Hands-on Circuits and PCB Design with CAD Software</li>
+        <li>VLSI Design - Internshala Training</li>
+        <li>PCB Design - Pantech</li>
+        <li>Computer Vision Onramp - MathWorks</li>
+        <li>MATLAB Onramp - MathWorks</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>C Programming</li>
+        <li>Digital Electronics</li>
+        <li>IoT</li>
+        <li>PCB Design in Proteus</li>
+        <li>Time Management</li>
+        <li>Leadership</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Internships & Experience</h2>
+      <ul>
+        <li>Intern at CITD, Guindy - IoT Domain</li>
+        <li>Intern at Marzelet Info Tech - IoT Developer</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: yaswannarayanan28@gmail.com</p>
+      <p class="contact-links">
+        <a href="https://www.linkedin.com/in/yaswan-narayanan-6746182a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+        <a href="https://github.com/yaswannarayanan28-tech">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Yaswan Narayanan. All rights reserved.
+  </footer>
+</body>
+</html>
+
+
+
+
+
